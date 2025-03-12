@@ -1,16 +1,21 @@
 import styled from "styled-components";
 import Card from "../Components/Card";
 
-
 export const StyledCard = styled(Card)`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-
-
-`
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 350px;
+  /* height: 300px; */
+  min-height: fit-content;
+  /* border: 2px solid black; */
+  /* margin: 0 auto; */
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  background: #fbfbfb;
+  margin: 10rem auto 8.1rem auto;
+`;
 
 export const ExampleCard = styled.button`
   display: flex;
