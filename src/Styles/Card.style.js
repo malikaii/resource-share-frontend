@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Card from "../Components/Card";
+import Listing from "../Components/Listing";
 
 export const StyledCard = styled(Card)`
   display: flex;
@@ -13,7 +14,7 @@ export const StyledCard = styled(Card)`
   /* margin: 0 auto; */
   border-radius: 8px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-  background: #fbfbfb;
+  background:rgb(226, 236, 234);
   margin: 10rem auto 8.1rem auto;
 `;
 
@@ -22,3 +23,15 @@ export const ExampleCard = styled.button`
   align-items: center;
   justify-content: center;
 `;
+
+export const ListingContainer = styled.div`
+  /* display: flex;
+  flex-direction: row; */
+`;
+// export const ListingItem = styled(Listing)`
+//   /* display: flex;
+//   width: 40px;
+//   height: 80px; */
+//   /* width: 10px;
+//   flex: 0 1 50%; */
+// `;

@@ -1,9 +1,19 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom';
-import { useAuth } from './Auth';
+import React from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { useAuth } from "./Auth";
+import { useOktaAuth } from "@okta/okta-react";
+import { Button  } from "../Styles/Button.style";
 function Navbar() {
-    const auth = useAuth();
+  const {oktaAuth, authState} = useOktaAuth();
+
+  if(!authState) {
+    return <p>Loading....</p>
+  }
+
+
+  const handleLogout = async() => oktaAuth.signOut();
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -22,11 +32,18 @@ function Navbar() {
           <li>
             <Link to="/profile">Profile</Link>
           </li>
-         {
-            !auth.user && <li>
-            <Link to="/login">Login</Link>
+          <li>
+            <Link to="/post">Post a new listing</Link>
           </li>
-         } 
+          {!authState.isAuthenticated ? (
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+          ) : (
+            <li>
+              <Button onClick={handleLogout}>Logout</Button>
+            </li>
+          )}
         </ul>
       </div>
     </nav>

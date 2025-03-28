@@ -6,7 +6,7 @@ import { useAuth } from "../Components/Auth";
 import { useNavigate, useLocation } from "react-router-dom";
 function Login() {
 
-    const auth = useAuth();
+    // const auth = useAuth();
   const [loginCredentials, setLoginCredentials] = useState({
     username: "",
     password: "",
@@ -30,7 +30,7 @@ function Login() {
   
   const sendLoginRequest = (e) => {
     e.preventDefault();
-    auth.login(loginCredentials)
+    // auth.login(loginCredentials)
     navigate(redirectPath, {replace: true})
   };
 

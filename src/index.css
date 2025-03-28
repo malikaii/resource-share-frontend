@@ -8,8 +8,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 
-  background-image: linear-gradient(#80cbc4, #042e2a);
-  color: white;
+  /* background-image: linear-gradient(#80cbc4, #042e2a); */
   min-height: 100vh;
   margin: 0;
 }
