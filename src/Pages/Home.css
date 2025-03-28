@@ -1,0 +1,67 @@
+.home-container {
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* margin: 20px; */
+  /* color: #fff; */
+  height: 80vh;
+  /* background-image: url('https://marvel-b1-cdn.bc0a.com/f00000000290274/www.lsu.edu/_resources/ldp/images/.private_ldp/a53995/production/master/eb925f07-0c01-47ee-b493-3de1ead54048.jpg');
+  background-size: cover;
+
+
+  
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: no-repeat;  */
+}
+
+.title {
+  font-size: 20px;
+  text-align: center;
+      /* Add the blur effect */
+      -webkit-backdrop-filter: blur(5px);
+
+      backdrop-filter: blur(5px);
+}
+
+.section-two {
+  display: flex;
+  background-color: beige;
+  height: 80vh;
+
+  /* margin-top: 15px; */
+  /* justify-content: space-between; */
+}
+
+.section-two div {
+  padding: 10px;
+  /* width: 50%; */
+}
+
+.section-description {
+  font-size: 20px;
+}
+
+.section-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px; */
+
+  height: 80vh;
+  margin: 10rem auto 8.1rem auto;
+  text-align: center;
+  width: fit-content;
+
+  /* margin-top: 15px; */
+  /* justify-content: space-between; */
+}
+
+.join-desc {
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  background: rgb(226, 236, 234);
+  padding: 20px;
+  min-height: fit-content;
+}
