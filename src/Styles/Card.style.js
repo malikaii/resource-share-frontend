@@ -23,15 +23,3 @@ export const ExampleCard = styled.button`
   align-items: center;
   justify-content: center;
 `;
-
-export const ListingContainer = styled.div`
-  /* display: flex;
-  flex-direction: row; */
-`;
-// export const ListingItem = styled(Listing)`
-//   /* display: flex;
-//   width: 40px;
-//   height: 80px; */
-//   /* width: 10px;
-//   flex: 0 1 50%; */
-// `;

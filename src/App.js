@@ -17,7 +17,12 @@ import { oktaConfig } from "./lib/oktaConfig";
 import { LoginCallback, Security } from "@okta/okta-react";
 import LoginWidget from "./Auth/LoginWidget";
 import TabComponent from "./Components/TabComponent";
+import "bootstrap/dist/css/bootstrap.min.css";
 import PostListing from "./Pages/PostListing";
+import Explore from "./Pages/Explore";
+import SingleItem from "./Pages/SingleItem";
+import PostListing2 from "./Pages/PostListing2";
+import NavbarComponent from "./Components/Navbar";
 const oktaAuth = new OktaAuth(oktaConfig)
 function App() {
 
@@ -42,7 +47,7 @@ function App() {
       onAuthRequired={customAuthHandler}
     >
       {/* <AuthProvider> */}
-      <Navbar />
+      <NavbarComponent />
 
       <AppContainer>
         <Routes>
@@ -59,12 +64,14 @@ function App() {
             path="/post"
             element={
               <ProtectedRoute>
-                <PostListing />
+                <PostListing2 />
               </ProtectedRoute>
             }
           />
           <Route path="/login" element={<LoginWidget config={oktaConfig} />} />
           <Route path="/login/callback" element={LoginCallback} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/item/:id" element={<SingleItem />} />
 
           {/* <Route path="/signup" element={<Register />} /> */}
 

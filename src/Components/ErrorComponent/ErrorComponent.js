@@ -1,7 +1,7 @@
 import React from "react";
 import "./ErrorComponent.css";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../Styles/Button.style";
+import { Button } from "react-bootstrap";
 
 function ErrorComponent({ errorText }) {
   console.log("Error Text: ", errorText);
@@ -12,7 +12,7 @@ function ErrorComponent({ errorText }) {
       <div>
         <h4>Something went wrong</h4>
         <p>{errorText}</p>
-        <Button onClick={() => navigate(-1)}>Go back</Button>
+        <Button variant="success" onClick={() => window.location.reload()}>Go back</Button>
       </div>
     </div>
   );
