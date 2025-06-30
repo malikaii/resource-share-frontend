@@ -2,6 +2,7 @@ import OktaSignIn from '@okta/okta-signin-widget';
 import React, {useEffect, useRef} from 'react'
 import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css'
 import { oktaConfig } from '../lib/oktaConfig';
+import { Container } from 'react-bootstrap';
 
 function SignInWidget({onSuccess, onError}) {
 
@@ -25,9 +26,9 @@ function SignInWidget({onSuccess, onError}) {
     
     
   return (
-    <div style={{'margin': '25px'}}>
+    <Container style={{'margin': '25px'}}>
         <div ref={widgetRef}></div>
-    </div>
+    </Container>
   )
 }
 

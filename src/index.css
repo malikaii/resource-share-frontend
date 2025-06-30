@@ -7,8 +7,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-
-  /* background-image: linear-gradient(#80cbc4, #042e2a); */
+  /* background-color: #C7DB9C !important; */
+  /* background-image: linear-gradient(#C7DB9C, #80cbc4); */
   min-height: 100vh;
   margin: 0;
 }
