@@ -1,14 +1,35 @@
-export const categories = [
-  "Art",
-  "Music",
-  //   "Video Games",
-  "Clothing",
-  "Furniture",
-  "Textbooks",
+import furniture from "./Assets/furniture.jpg"
+import music from "./Assets/music.jpg"
+import books from "./Assets/books.jpg";
+import clothing from "./Assets/backgroundclothing.png"
+export const categoriesWithAttributes = [
+  {
+    title: "Art",
+    
+    imgSrc: ""  
+  },
+  {
+    title: "Music",
+    imgSrc: music  
+  },
+  {
+    title: "Clothing",
+    imgSrc: clothing
+  },
+  {
+    title: "Furniture",
+    imgSrc: furniture  
+  },
+  {
+    title: "Textbooks",
+    imgSrc: books
+  },
 ];
 
+export const categories = ["Art", "Music", "Clothing", "Furniture", "Textbooks"]
+
 export const listing = [
-  {
+  { 
     id: 0,
     imgSrc: "holder.js/100px180",
     title: "Bottle of Mtn. Dew",
@@ -32,7 +53,7 @@ export const listing = [
     category: "Furniture",
     price: "250",
   },
-  {
+  { 
     id: 3, 
     imgSrc: "holder.js/100px180",
     title: "AF1",

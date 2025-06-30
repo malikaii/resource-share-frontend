@@ -21,6 +21,7 @@
     "react-slick": "^0.30.3",
     "react-spinners": "^0.15.0",
     "react-tabs": "^6.1.0",
+    "resource-share-frontend": "file:",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.15",
     "swiper": "^11.2.5",

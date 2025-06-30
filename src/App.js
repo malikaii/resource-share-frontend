@@ -23,6 +23,8 @@ import Explore from "./Pages/Explore";
 import SingleItem from "./Pages/SingleItem";
 import PostListing2 from "./Pages/PostListing2";
 import NavbarComponent from "./Components/Navbar";
+import ProfileComp from "./Pages/ProfileComp";
+import Footer from "./Components/Footer";
 const oktaAuth = new OktaAuth(oktaConfig)
 function App() {
 
@@ -56,7 +58,7 @@ function App() {
             path="/profile"
             element={
               <ProtectedRoute>
-                <Profile />
+                <ProfileComp />
               </ProtectedRoute>
             }
           />
@@ -87,6 +89,7 @@ function App() {
         </Routes>
         <GlobalStyles />
       </AppContainer>
+      <Footer/>
       {/* </AuthProvider> */}
     </Security>
   );

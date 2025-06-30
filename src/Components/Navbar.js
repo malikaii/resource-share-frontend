@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Navbar.css";
+// import "./Navbar.css"; 
 import { Link } from "react-router-dom";
 import { useAuth } from "./Auth";
 import { useOktaAuth } from "@okta/okta-react";
@@ -15,7 +15,7 @@ function NavbarComponent() {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="p-4">
         <Container fluid>
           <Navbar.Brand as={Link} to="/">
             Resource Share

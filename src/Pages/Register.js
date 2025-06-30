@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../Components/Auth";
 import { useNavigate, useLocation } from "react-router-dom";
 function Register() {
-  const auth = useAuth();
+  const auth = useAuth(); 
   const [userData, setUserData] = useState({
     username: "",
     password: "",

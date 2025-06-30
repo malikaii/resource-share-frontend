@@ -41,14 +41,23 @@ const navigate = useNavigate();
   return (
     <>
       <Container>
-        <Row className="m-5 p-5">
-          <h4 className="text-center">Explore listings below</h4>
+        <Row
+          className="m-5 p-5"
+          style={{
+            // backgroundImage: `url(${sofabg})`,
+            // backgroundSize: "cover", // Optional: Adjusts how the image is sized
+            // backgroundRepeat: "no-repeat", // Optional: Prevents image repetition
+            // height: '50vh', // Example: Sets the height of the div
+            // borderRadius: '5px'
+          }}
+        >
+          <h3 className="text-center">New Listings</h3>
         </Row>
         <Row>
           <Col>
             <Stack direction="horizontal" gap={3} className="mb-4">
               <Form.Control
-                className="me-auto"
+                className=""
                 placeholder="Search an item.."
               />
               <Button variant="secondary">Submit</Button>
@@ -86,19 +95,27 @@ const navigate = useNavigate();
           </Col>
           <Col md="8" lg="9">
             <Row className="d-flex gap-5">
-              {listingItems?.length===0? <h6>No results found that match your search</h6>
-              :
-              listingItems.map((item, key) => (
-                <Card
-                  style={{ width: "18rem", fontSize: "15 px", padding: "5px" }}
-                >
-                  <Card.Img variant="top" src={item.imgSrc} />
-                  <Card.Body>
-                    <Card.Title onClick={()=>navigateToItem(item.id)}>{item.title}</Card.Title>
-                    <Card.Text>${item.price}</Card.Text>
-                  </Card.Body>
-                </Card>
-              ))}{" "}
+              {listingItems?.length === 0 ? (
+                <h6>No results found that match your search</h6>
+              ) : (
+                listingItems.map((item, key) => (
+                  <Card
+                    style={{
+                      width: "18rem",
+                      fontSize: "15 px",
+                      padding: "5px",
+                    }}
+                  >
+                    <Card.Img variant="top" src={item.imgSrc} />
+                    <Card.Body>
+                      <Card.Title onClick={() => navigateToItem(item.id)}>
+                        {item.title}
+                      </Card.Title>
+                      <Card.Text>${item.price}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                ))
+              )}{" "}
             </Row>
           </Col>
         </Row>
